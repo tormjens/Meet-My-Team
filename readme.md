@@ -14,28 +14,29 @@ Ever needed to display a lot of team members but you find it too lengthy to put 
 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
 
-**Features**:
-1. Responsive Grid with Smooth Readjustments
-- We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
+**Features**:  
+1. Responsive Grid with Smooth Readjustments - We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
 
-2. Responsive Modal Display
-- We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
+2. Responsive Modal Display - We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
 Reveal Modal : http://zurb.com/playground/reveal-modal-plugin
 
-3. Theme Agnostic
-- We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
+3. Theme Agnostic - We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
 
-4. Easy Styling Classes
-- We provided simple style classes that theme developers can use to target and style their own. More information about this coming
+4. Easy Styling Classes - We provided simple style classes that theme developers can use to target and style their own. More information about this coming
 
 5. Insert into any page with our shortcode
 
-**Supported Fields**
+**Supported Fields**  
 1. Team Member Name
+
 2. Team Member Profile Picture
+
 3. Team Member Email
+
 4. Team Member Biography
+
 5. Team Member Personal URL e.g. Facebook, Linkedin
+
 ... More Coming
 
 ## Installation ##
@@ -86,22 +87,6 @@ We are actually using a modified version of bootstrap. It was designed to shrink
 ### Something is broken? Want a particular feature? ###
 
 Feel free to email us at ahoy@buooy.com.
-
-
-## Screenshots ##
-
-###1. Add a variety of information to each team member###
-[missing image]
-
-###2. Add to any page with our easy to use shortcode###
-[missing image]
-
-###3. Responsive grid that works across devices###
-[missing image]
-
-###4. Responsive Modal that displays each team member's information###
-[missing image]
-
 
 ## Changelog ##
 
