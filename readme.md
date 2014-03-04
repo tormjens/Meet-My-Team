@@ -1,15 +1,15 @@
-=== Meet My Team ===
-Contributors: Buooy
-Tags: meet,my,team,members,staff,gallery,responsive,modal,grid
-Requires at least: 3.6
-Tested up to: 3.8.1
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# Meet My Team #
+**Contributors:** Buooy  
+**Tags:** meet,my,team,members,staff,gallery,responsive,modal,grid  
+**Requires at least:** 3.6  
+**Tested up to:** 3.8.1  
+**Stable tag:** 1.0.0  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
 Ever needed to display a lot of team members but you find it too lengthy to put into a single page? Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a responsive grid and modal! Sounds great?
 
-== Description ==
+## Description ##
 Ever needed to display a lot of team members but you find it too lengthy to put into a single page? 
 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
@@ -38,16 +38,16 @@ Reveal Modal : http://zurb.com/playground/reveal-modal-plugin
 5. Team Member Personal URL e.g. Facebook, Linkedin
 ... More Coming
 
-== Installation ==
+## Installation ##
 
-= Using The WordPress Dashboard =
+### Using The WordPress Dashboard ###
 
 1. Navigate to the 'Add New' in the plugins dashboard
 2. Search for 'Meet My Team'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 
-= Uploading in WordPress Dashboard =
+### Uploading in WordPress Dashboard ###
 
 1. Navigate to the 'Add New' in the plugins dashboard
 2. Navigate to the 'Upload' area
@@ -55,7 +55,7 @@ Reveal Modal : http://zurb.com/playground/reveal-modal-plugin
 4. Click 'Install Now'
 5. Activate the plugin in the Plugin dashboard
 
-= Using FTP =
+### Using FTP ###
 
 1. Download `meet-my-team.zip`
 2. Extract the `meet-my-team` directory to your computer
@@ -63,13 +63,13 @@ Reveal Modal : http://zurb.com/playground/reveal-modal-plugin
 4. Activate the plugin in the Plugin dashboard
 
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
-= How Do I Use The Plugin? =
+### How Do I Use The Plugin? ###
 
 You can use it simply with this shortcode: [meet-my-team]
 
-= What Shortcodes Are Available =
+### What Shortcodes Are Available ###
 
 We are currently working on a few, but as of now, we support the use of two options:
 
@@ -79,27 +79,35 @@ We are currently working on a few, but as of now, we support the use of two opti
 2. [meet-my-team parent_container_id="ID"] where ID can be the id of the overall container encapsulating the modals
 - This is utilized more for theme developers who want to target the specific classes
 
-= What responsive grid are you using =
+### What responsive grid are you using ###
 
 We are actually using a modified version of bootstrap. It was designed to shrink to a single column from 768px and below. More options in the future.
 
-= Something is broken? Want a particular feature? =
+### Something is broken? Want a particular feature? ###
 
 Feel free to email us at ahoy@buooy.com.
 
 
-== Screenshots ==
+## Screenshots ##
 
-1. Add a variety of information to each team member
-2. Add to any page with our easy to use shortcode
-3. Responsive grid that works across devices
-4. Responsive Modal that displays each team member's information
+###1. Add a variety of information to each team member###
+[missing image]
 
-== Changelog ==
+###2. Add to any page with our easy to use shortcode###
+[missing image]
 
-= 1.0 =
+###3. Responsive grid that works across devices###
+[missing image]
+
+###4. Responsive Modal that displays each team member's information###
+[missing image]
+
+
+## Changelog ##
+
+### 1.0 ###
 * Introduction to Meet My Team
 
-== Upgrade Notice ==
+## Upgrade Notice ##
 
 None as of now
