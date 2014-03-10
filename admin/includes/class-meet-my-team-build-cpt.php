@@ -21,6 +21,9 @@ class Meet_My_Team_Build_Cpt {
 	protected $meta_box_title = 'Additional Details';
 	protected $description  = 'Team members is a custom post type for Meet My Team';
 
+	protected $tax_name_lower = 'group';
+	protected $tax_name_upper = 'Group';
+
 	/* Custom Fields */
 	public $mmt_meta_boxes = array();
 
@@ -58,8 +61,8 @@ class Meet_My_Team_Build_Cpt {
 			'label'               => __( $this->post_name, $this->text_domain ),
 			'description'         => __( $this->description, $this->text_domain ),
 			'labels'              => $labels,
-			'supports'            => array( 'title' ),
-			'taxonomies'          => array( '' ),
+			'supports'            => array( 'title', 'page-attributes' ),
+			'taxonomies'          => array( "category" ),
 			'hierarchical'        => true,
 			'public'              => true,
 			'show_ui'             => true,
@@ -72,7 +75,7 @@ class Meet_My_Team_Build_Cpt {
 			'has_archive'         => false,
 			'exclude_from_search' => false,
 			'publicly_queryable'  => true,
-			'capability_type'     => 'page',
+			'capability_type'     => 'post',
 		);
 		register_post_type( $this->post_type, $args );
 

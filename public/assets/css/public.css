@@ -40,9 +40,6 @@
 		margin: 0 auto;
 		padding-bottom: 20px;
 	}
-	.mmt:hover{
-		cursor: pointer;
-	}
 	.mmt>*{
 		text-align:center;
 	}

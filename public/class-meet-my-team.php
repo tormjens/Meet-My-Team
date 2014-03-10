@@ -17,7 +17,7 @@ class Meet_My_Team {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.1.0';
 
 	/**
 	 * @TODO - Rename "meet-my-team" to the name your your plugin
@@ -251,7 +251,7 @@ class Meet_My_Team {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), time()/*self::VERSION*/ );
+		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'assets/css/public.min.css', __FILE__ ), array(), self::VERSION );
 	}
 
 	/**
@@ -260,7 +260,7 @@ class Meet_My_Team {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_slug . '-plugin-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'jquery' ), time()/*self::VERSION*/ );
+		wp_enqueue_script( $this->plugin_slug . '-plugin-script', plugins_url( 'assets/js/public.min.js', __FILE__ ), array( 'jquery' ), self::VERSION );
 	}
 
 	/**

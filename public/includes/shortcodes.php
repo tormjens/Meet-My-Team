@@ -19,6 +19,9 @@ class Meet_My_Team_Shortcodes {
 	protected $item_container;
 	protected $item_container_class;
 	protected $cols;
+	protected $center;
+	protected $display_picture;
+	protected $show_groups;
 
 	public function __construct() {
 	}
@@ -31,6 +34,7 @@ class Meet_My_Team_Shortcodes {
 	 */
 	public function extract_shortcodes( $atts ){
 		extract( shortcode_atts( array(
+			
 			'parent_container'			=>	'div',
 			'parent_container_class'	=>	'',
 			'parent_container_id'		=>	'',
@@ -41,6 +45,15 @@ class Meet_My_Team_Shortcodes {
 			'item_container_class'		=>	'',
 
 			'cols'						=>	'3',
+
+			'align'						=>	'center',
+
+			'display_picture'			=>	'true',
+
+			'enable_modal'				=>	'true',
+
+			'show_groups'				=>	'',
+
 		), $atts ) );
 
 		$this->parent_container 		= 	$parent_container;
@@ -48,6 +61,7 @@ class Meet_My_Team_Shortcodes {
 		$this->parent_container_class	=	$parent_container_class;
 		$this->row_container_class		=	$row_container_class;
 		$this->item_container 			=	$item_container;
+		$this->show_groups				=	$show_groups;
 		
 		if( $cols == "1" || $cols == "2" || $cols == "3" || $cols == "4" || $cols == "6" ){
 			$this->cols = $cols;
@@ -62,6 +76,28 @@ class Meet_My_Team_Shortcodes {
 		else{
 			$this->item_container_class = $item_container_class;
 		}
+
+		if( $align != "left" || $align != "center" ){
+			$this->align =	$align;
+		}
+		else{
+			$this->align =	'center';	
+		}
+
+		if( $display_picture != "true" || $display_picture != "false" ){
+			$this->display_picture = $display_picture;
+		}
+		else{
+			$this->display_picture = 'true';
+		}
+
+		if( $enable_modal != "true" || $enable_modal != "false" ){
+			$this->enable_modal = $enable_modal;
+		}
+		else{
+			$this->enable_modal = 'true';
+		}
+
 	}
 	
 	/**
@@ -78,7 +114,10 @@ class Meet_My_Team_Shortcodes {
 		$team_members_list = $this->get_team_members();
 
 		// Create the mmt display
-		$mmt = "<".$this->parent_container." class='mmt_container ".$this->parent_container_class."' id='".$this->parent_container_id."'>";
+		$mmt = "<".$this->parent_container." 
+						data-align='".$this->align."' 
+						data-enable-modal = '".$this->enable_modal."' 
+						class='mmt_container ".$this->parent_container_class."' id='".$this->parent_container_id."'>";
 
 			$team_members = array();
 			foreach( $team_members_list as $index=>$member ){
@@ -116,21 +155,19 @@ class Meet_My_Team_Shortcodes {
 	 */
 	private function get_team_members(){
 
+		$cats = explode(',', $this->show_groups);
+		$cat_list = '';
+		foreach( $cats as $cat ){
+			if( get_cat_ID( $cat ) != 0 )  $cat_list .= get_cat_ID( $cat ).",";
+		}
+
 		$args = array(
-			'posts_per_page'   => 	-1,
-			'offset'           => 	0,
-			'category'         => 	'',
-			'orderby'          => 	'post_date',
-			'order'            => 	'ASC',
-			'include'          => 	'',
-			'exclude'          => 	'',
-			'meta_key'         => 	'',
-			'meta_value'       => 	'',
-			'post_type'        => 	'team_members',
-			'post_mime_type'   => 	'',
-			'post_parent'      => 	'',
-			'post_status'      => 	'publish',
-			'suppress_filters' => 	true
+			'post_type'        	=> 	'team_members',
+			'posts_per_page'   	=> 	-1,
+			'orderby'          	=> 	'menu_order',
+			'order'            	=> 	'ASC',
+			'category'			=> 	$cat_list,
+			//'post_status'      	=> 	'publish'
 		);
 
 		$team_members = get_posts( $args );
@@ -144,9 +181,13 @@ class Meet_My_Team_Shortcodes {
 	private function build_single_member( $details ){
 
 		// Build the Modal
-		$modal = '	<div id="mmt_member_'.$details['id'].'" class="reveal-modal">
-						<div class="mmt_bio_picture"><img src="'.$details['bio_picture'].'"></div>
-						<h4>'.$details['name'].'</h4>
+		$modal = '	<div id="mmt_member_'.$details['id'].'" class="reveal-modal">';
+		
+		if( $details['bio_picture'] != '' ){
+			$modal .= 	'<div class="mmt_bio_picture"><img src="'.$details['bio_picture'].'"></div>';
+		}
+
+		$modal .=		'<h4>'.$details['name'].'</h4>
 						<h6>'.$details['designation'].'</h6>';
 
 		if( $details['email'] != '' ){				
@@ -164,7 +205,9 @@ class Meet_My_Team_Shortcodes {
 
 		// Build the initial display
 		$display = '<'.$this->item_container.' data-reveal-id="mmt_member_'.$details['id'].'" class="mmt '.$this->item_container_class.'">';
-			$display .= '<div class="mmt_member_img"><img src="'.$details['bio_picture'].'" alt="'.$details['name'].'" ></div>';
+			if( $this->display_picture == 'true' ){
+				$display .= '<div class="mmt_member_img"><img src="'.$details['bio_picture'].'" alt="'.$details['name'].'" ></div>';
+			}
 			$display .= '<h4>'.$details['name'].'</h3>';
 			$display .= '<h6>'.$details['designation'].'</h4>';
 		$display .= '</'.$this->item_container.'>';

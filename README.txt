@@ -3,11 +3,11 @@ Contributors: Buooy
 Tags: meet,my,team,members,staff,gallery,responsive,modal,grid
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Ever needed to display a lot of team members but you find it too lengthy to put into a single page? Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a responsive grid and modal! Sounds great?
+Meet My Team is an awesome way to display your team members in a grid with a modal for each team member!
 
 == Description ==
 Ever needed to display a lot of team members but you find it too lengthy to put into a single page? 
@@ -15,19 +15,10 @@ Ever needed to display a lot of team members but you find it too lengthy to put 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
 
 **Features**:
-1. Responsive Grid with Smooth Readjustments
-- We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
-
-2. Responsive Modal Display
-- We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
-Reveal Modal : http://zurb.com/playground/reveal-modal-plugin
-
-3. Theme Agnostic
-- We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
-
-4. Easy Styling Classes
-- We provided simple style classes that theme developers can use to target and style their own. More information about this coming
-
+1. Responsive Grid with Smooth Readjustments : We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
+2. Responsive Modal Display : We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
+3. Theme Agnostic : We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
+4. Easy Styling Classes : We provided simple style classes that theme developers can use to target and style their own. More information about this coming
 5. Insert into any page with our shortcode
 
 **Supported Fields**
@@ -73,11 +64,18 @@ You can use it simply with this shortcode: [meet-my-team]
 
 We are currently working on a few, but as of now, we support the use of two options:
 
-1. [meet-my-team cols="NUM"] where NUM can be 1,2,3,4,6. Default: 3
-- cols will list out the number of cols of team members will be displayed in each row.
+1. [meet-my-team cols="NUM"] Default: 3 where NUM can be 1,2,3,4,6. => cols will list out the number of cols of team members will be displayed in each row.
 
-2. [meet-my-team parent_container_id="ID"] where ID can be the id of the overall container encapsulating the modals
-- This is utilized more for theme developers who want to target the specific classes
+2. [meet-my-team parent_container_id="ID"] where ID can be the id of the overall container encapsulating the modals  => This is utilized more for theme developers who want to target the specific classes
+
+3. [meet-my-team show_groups="GROUPS"] where GROUPS can be the different categories set forthe post
+
+4. [meet-my-team display_modal="BOOLEAN"] where BOOLEAN is true or false. This can be used to enable or disable the modal
+
+5. [meet-my-team align="ALIGN"] where ALIGN is left or center. This will allow the columns to be centered or left align.
+
+6. [meet-my-team display_picture="BOOLEAN"] wwhere BOOLEAN is true or false. This will display the picture on the page (outside of the modal)
+
 
 = What responsive grid are you using =
 
@@ -96,6 +94,11 @@ Feel free to email us at ahoy@buooy.com.
 4. Responsive Modal that displays each team member's information
 
 == Changelog ==
+
+= 1.1 =
+* New Features: More shortcodes are now available!
+* New Features: Added categories to the members that can be used for groups
+* Bug Fixes: Post order added back to rearrange team member hierarchy
 
 = 1.0 =
 * Introduction to Meet My Team

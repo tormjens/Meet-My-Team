@@ -153,9 +153,9 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'      => $prefix . 'test_select',
 				'type'    => 'select',
 				'options' => array(
-					'standard' => __( 'Option One', 'cmb' ),
-					'custom'   => __( 'Option Two', 'cmb' ),
-					'none'     => __( 'Option Three', 'cmb' ),
+					array( 'name' => __( 'Option One', 'cmb' ), 'value' => 'standard', ),
+					array( 'name' => __( 'Option Two', 'cmb' ), 'value' => 'custom', ),
+					array( 'name' => __( 'Option Three', 'cmb' ), 'value' => 'none', ),
 				),
 			),
 			array(
@@ -164,9 +164,9 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'      => $prefix . 'test_radio_inline',
 				'type'    => 'radio_inline',
 				'options' => array(
-					'standard' => __( 'Option One', 'cmb' ),
-					'custom'   => __( 'Option Two', 'cmb' ),
-					'none'     => __( 'Option Three', 'cmb' ),
+					array( 'name' => __( 'Option One', 'cmb' ), 'value' => 'standard', ),
+					array( 'name' => __( 'Option Two', 'cmb' ), 'value' => 'custom', ),
+					array( 'name' => __( 'Option Three', 'cmb' ), 'value' => 'none', ),
 				),
 			),
 			array(
@@ -175,9 +175,9 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'      => $prefix . 'test_radio',
 				'type'    => 'radio',
 				'options' => array(
-					'option1' => __( 'Option One', 'cmb' ),
-					'option2' => __( 'Option Two', 'cmb' ),
-					'option3' => __( 'Option Three', 'cmb' ),
+					array( 'name' => __( 'Option One', 'cmb' ), 'value' => 'standard', ),
+					array( 'name' => __( 'Option Two', 'cmb' ), 'value' => 'custom', ),
+					array( 'name' => __( 'Option Three', 'cmb' ), 'value' => 'none', ),
 				),
 			),
 			array(
@@ -235,11 +235,10 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type' => 'file',
 			),
 			array(
-				'name'         => __( 'Multiple Files', 'cmb' ),
-				'desc'         => __( 'Upload or add multiple images/attachments.', 'cmb' ),
-				'id'           => $prefix . 'test_file_list',
-				'type'         => 'file_list',
-				'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+				'name' => __( 'Multiple Files', 'cmb' ),
+				'desc' => __( 'Upload or add multiple images/attachments.', 'cmb' ),
+				'id'   => $prefix . 'test_file_list',
+				'type' => 'file_list',
 			),
 			array(
 				'name' => __( 'oEmbed', 'cmb' ),
