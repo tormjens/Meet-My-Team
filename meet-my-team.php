@@ -14,7 +14,7 @@
  * Plugin Name:       Meet My Team
  * Plugin URI:        http://buooy.com
  * Description:       Ever needed to display a lot of team members but you find it too lengthy to put into a single page? Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
- * Version:           1.1.0
+ * Version:           1.1.1
  * Author:            Aaron Lee
  * Author URI:        http://buooy.com
  * Text Domain:       meet-my-team-locale

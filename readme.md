@@ -3,7 +3,7 @@
 **Tags:** meet,my,team,members,staff,gallery,responsive,modal,grid  
 **Requires at least:** 3.6  
 **Tested up to:** 3.8.1  
-**Stable tag:** 1.0.1  
+**Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -16,17 +16,27 @@ Meet My Team solves that problem by providing an intuitive interface that allows
 
 **Features**:
 1. Responsive Grid with Smooth Readjustments : We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
+
 2. Responsive Modal Display : We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
+
 3. Theme Agnostic : We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
+
 4. Easy Styling Classes : We provided simple style classes that theme developers can use to target and style their own. More information about this coming
+
 5. Insert into any page with our shortcode
+
 
 **Supported Fields**
 1. Team Member Name
+
 2. Team Member Profile Picture
+
 3. Team Member Email
+
 4. Team Member Biography
+
 5. Team Member Personal URL e.g. Facebook, Linkedin
+
 ... More Coming
 
 ## Installation ##
@@ -89,19 +99,18 @@ Feel free to email us at ahoy@buooy.com.
 ## Screenshots ##
 
 ###1. Add a variety of information to each team member###
-[missing image]
 
 ###2. Add to any page with our easy to use shortcode###
-[missing image]
 
 ###3. Responsive grid that works across devices###
-[missing image]
 
 ###4. Responsive Modal that displays each team member's information###
-[missing image]
 
 
 ## Changelog ##
+
+### 1.1.1 ###
+* Fixed bug that did not include the css and js
 
 ### 1.1 ###
 * New Features: More shortcodes are now available!
