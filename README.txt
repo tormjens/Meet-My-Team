@@ -3,7 +3,7 @@ Contributors: Buooy
 Tags: meet,my,team,members,staff,gallery,responsive,modal,grid
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,8 @@ Meet My Team solves that problem by providing an intuitive interface that allows
 **Features**:
 1. Responsive Grid with Smooth Readjustments : We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
 
-2. Responsive Modal Display : We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
+2. Responsive Modal Display : We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive
+display of your individual theme.
 
 3. Theme Agnostic : We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
 
@@ -104,8 +105,11 @@ Feel free to email us at ahoy@buooy.com.
 
 == Changelog ==
 
+= 1.1.2 =
+* Fixed Bug that did not update the version
+
 = 1.1.1 =
-* Fixed bug that did not include the css and js
+* Fixed Bug that doesn't include js and css
 
 = 1.1 =
 * New Features: More shortcodes are now available!

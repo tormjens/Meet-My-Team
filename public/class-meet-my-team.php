@@ -17,7 +17,7 @@ class Meet_My_Team {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.1.0';
+	const VERSION = '1.1.2';
 
 	/**
 	 * @TODO - Rename "meet-my-team" to the name your your plugin
