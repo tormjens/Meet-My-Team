@@ -7,6 +7,8 @@
 (function ( $ ) {
 	"use strict";
 
+	var mmt_debug = false;
+
 	var waitForFinalEvent = (function () {
 	  var timers = {};
 	  return function (callback, ms, uniqueId) {
@@ -73,11 +75,23 @@
 			left: 	(_expected_margin_left)
 		},300);
 
+		// Used for debug only
+		if(mmt_debug == true){
+			console.log( 'window width:' + _window_width );
+			console.log( 'modal width:' + _modal_width );
+			console.log( 'current margin left:' + _current_margin_left );
+			console.log( 'expected margin left:' + _expected_margin_left );
+		}
+
 	}
 
 	$(document).ready(function(){
 
 		var resizing = 0;
+
+		if( $('.mmt_container').data('debug') == true ){
+			mmt_debug = true;
+		}
 
 		if( $('.mmt_container').length > 0 ){
 			mmt_center_rows();

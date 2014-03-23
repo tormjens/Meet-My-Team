@@ -10,11 +10,13 @@
 Meet My Team is an awesome way to display your team members in a grid with a modal for each team member!
 
 ## Description ##
+
 Ever needed to display a lot of team members but you find it too lengthy to put into a single page? 
 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
 
-**Features**:
+**Features**
+
 1. Responsive Grid with Smooth Readjustments : We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
 2. Responsive Modal Display : We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive display of your individual theme.
 3. Theme Agnostic : We implemented a minimal css strategy so that the plugin will fit in with any theme that you utilize.
@@ -22,6 +24,7 @@ Meet My Team solves that problem by providing an intuitive interface that allows
 5. Insert into any page with our shortcode
 
 **Supported Fields**
+
 1. Team Member Name
 2. Team Member Profile Picture
 3. Team Member Email

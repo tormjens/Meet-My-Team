@@ -54,6 +54,8 @@ class Meet_My_Team_Shortcodes {
 
 			'show_groups'				=>	'',
 
+			'debug'						=>	'false',
+
 		), $atts ) );
 
 		$this->parent_container 		= 	$parent_container;
@@ -62,6 +64,7 @@ class Meet_My_Team_Shortcodes {
 		$this->row_container_class		=	$row_container_class;
 		$this->item_container 			=	$item_container;
 		$this->show_groups				=	$show_groups;
+		$this->debug 					=	$debug;
 		
 		if( $cols == "1" || $cols == "2" || $cols == "3" || $cols == "4" || $cols == "6" ){
 			$this->cols = $cols;
@@ -115,6 +118,7 @@ class Meet_My_Team_Shortcodes {
 
 		// Create the mmt display
 		$mmt = "<".$this->parent_container." 
+						data-debug='".$this->debug."'
 						data-align='".$this->align."' 
 						data-enable-modal = '".$this->enable_modal."' 
 						class='mmt_container ".$this->parent_container_class."' id='".$this->parent_container_id."'>";
@@ -133,7 +137,7 @@ class Meet_My_Team_Shortcodes {
 				$member_details['email']		=	get_post_meta( $member->ID, 'mmt_email', true );
 				$member_details['bio_picture']	=	get_post_meta( $member->ID, 'mmt_bio_picture', true );
 				$member_details['biography']	=	wpautop( get_post_meta( $member->ID, 'mmt_biography', true ) );
-				$member_details['personal_url']	=	get_post_meta( $member->ID, 'mmt_personal_url', true );
+				$member_details['personal_url']	=	get_post_meta( $member->ID, 'mmt_url', true );
 
 
 				$mmt .= $this->build_single_member( $member_details );
@@ -146,7 +150,7 @@ class Meet_My_Team_Shortcodes {
 
 		$mmt .= "</".$this->parent_container.">";
 
-		echo $mmt;
+		return $mmt;
 
 	}
 

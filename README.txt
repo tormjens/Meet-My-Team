@@ -14,7 +14,8 @@ Ever needed to display a lot of team members but you find it too lengthy to put 
 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
 
-**Features**:
+**Features**
+
 1. Responsive Grid with Smooth Readjustments : We modified the bootstrap grid's naming convention so that it doesnt conflict with your bootstrap theme.
 
 2. Responsive Modal Display : We utilised the well tested Reveal Modal from Zurb Foundation to build a responsive
@@ -27,6 +28,7 @@ display of your individual theme.
 5. Insert into any page with our shortcode
 
 **Supported Fields**
+
 1. Team Member Name
 
 2. Team Member Profile Picture
@@ -104,6 +106,10 @@ Feel free to email us at ahoy@buooy.com.
 4. Responsive Modal that displays each team member's information
 
 == Changelog ==
+
+= 1.1.3 =
+* Fixed Bug that prevented content from appearing before shortcode (thanks to trevor and Wh1sp3r)
+* Added debugging console logs
 
 = 1.1.2 =
 * Fixed Bug that did not update the version
