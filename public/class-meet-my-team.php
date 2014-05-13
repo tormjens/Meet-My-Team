@@ -270,7 +270,7 @@ class Meet_My_Team {
 	 */
 	public function meet_my_team_shortcode( $atts ){
 		
-		include "includes/shortcodes.php";
+		include_once "includes/shortcodes.php";
 		$meet_my_team_shortcode = new Meet_My_Team_Shortcodes;
 		
 		// execute the display

@@ -3,7 +3,7 @@
 **Tags:** meet,my,team,members,staff,gallery,responsive,modal,grid  
 **Requires at least:** 3.6  
 **Tested up to:** 3.8.1  
-**Stable tag:** 1.1.3  
+**Stable tag:** 1.2.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -14,6 +14,17 @@ Meet My Team is an awesome way to display your team members in a grid with a mod
 Ever needed to display a lot of team members but you find it too lengthy to put into a single page? 
 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
+
+**Announcement**
+Firstly, I'm sorry for the long time of absence. I've been extremely busy and I apologize to all who have been having problem with the plugin.
+
+One of the biggest problem is the centering of the modal. This is likely caused by the modal javascript algorithm that is used to center the modal.
+
+If it is giving you any problems, please use the disable_modal_centering attribute as follows: [meet-my-team cols="3" show_groups="" debug='true' disable_modal_centering='true']
+
+The other issue is using the shortcode twice on the same page. This was due to me using "include" instead of "include_once". A careless mistake on my part. I have rectified as necessary.
+
+I will address other issues once I get a chance
 
 **Features**
 
@@ -78,6 +89,8 @@ We are currently working on a few, but as of now, we support the use of two opti
 5. [meet-my-team align="ALIGN"] where ALIGN is left or center. This will allow the columns to be centered or left align.
 
 6. [meet-my-team display_picture="BOOLEAN"] wwhere BOOLEAN is true or false. This will display the picture on the page (outside of the modal)
+
+7. [meet-my-team disable_modal_centering="BOOLEAN"] wwhere BOOLEAN is true or false. This will disable the modal centering javascript
 
 
 ### What responsive grid are you using ###

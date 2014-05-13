@@ -22,6 +22,7 @@ class Meet_My_Team_Shortcodes {
 	protected $center;
 	protected $display_picture;
 	protected $show_groups;
+	protected $disable_modal_centering;
 
 	public function __construct() {
 	}
@@ -54,6 +55,8 @@ class Meet_My_Team_Shortcodes {
 
 			'show_groups'				=>	'',
 
+			'disable_modal_centering'	=>	'false',
+
 			'debug'						=>	'false',
 
 		), $atts ) );
@@ -65,6 +68,7 @@ class Meet_My_Team_Shortcodes {
 		$this->item_container 			=	$item_container;
 		$this->show_groups				=	$show_groups;
 		$this->debug 					=	$debug;
+		$this->disable_modal_centering	=	$disable_modal_centering;
 		
 		if( $cols == "1" || $cols == "2" || $cols == "3" || $cols == "4" || $cols == "6" ){
 			$this->cols = $cols;
@@ -185,7 +189,7 @@ class Meet_My_Team_Shortcodes {
 	private function build_single_member( $details ){
 
 		// Build the Modal
-		$modal = '	<div id="mmt_member_'.$details['id'].'" class="reveal-modal">';
+		$modal = '	<div id="mmt_member_'.$details['id'].'" class="reveal-modal" data_modal_centering="'.$this->disable_modal_centering.'">';
 		
 		if( $details['bio_picture'] != '' ){
 			$modal .= 	'<div class="mmt_bio_picture"><img src="'.$details['bio_picture'].'"></div>';
