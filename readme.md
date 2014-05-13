@@ -16,6 +16,7 @@ Ever needed to display a lot of team members but you find it too lengthy to put 
 Meet My Team solves that problem by providing an intuitive interface that allows you to add your team members and display their information in a modal! Sounds great?
 
 **Announcement**
+
 Firstly, I'm sorry for the long time of absence. I've been extremely busy and I apologize to all who have been having problem with the plugin.
 
 One of the biggest problem is the centering of the modal. This is likely caused by the modal javascript algorithm that is used to center the modal.
