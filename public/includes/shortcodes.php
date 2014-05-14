@@ -121,11 +121,11 @@ class Meet_My_Team_Shortcodes {
 		$team_members_list = $this->get_team_members();
 
 		// Create the mmt display
-		$mmt = "<".$this->parent_container." 
-						data-debug='".$this->debug."'
-						data-align='".$this->align."' 
-						data-enable-modal = '".$this->enable_modal."' 
-						class='mmt_container ".$this->parent_container_class."' id='".$this->parent_container_id."'>";
+		$mmt = "<".$this->parent_container;
+		$mmt .= " data-debug='".$this->debug."'";
+		$mmt .=	" data-align='".$this->align."'";
+		$mmt .= " data-enable-modal = '".$this->enable_modal."'"; 
+		$mmt .= " class='mmt_container ".$this->parent_container_class."' id='".$this->parent_container_id."'>";
 
 			$team_members = array();
 			foreach( $team_members_list as $index=>$member ){
