@@ -3,7 +3,7 @@
 **Tags:** meet,my,team,members,staff,gallery,responsive,modal,grid  
 **Requires at least:** 3.6  
 **Tested up to:** 3.8.1  
-**Stable tag:** 1.2.1  
+**Stable tag:** 1.2.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -119,6 +119,10 @@ Feel free to email us at ahoy@buooy.com.
 
 
 ## Changelog ##
+
+### 1.2.3 ###
+* Fixed Bug that causes the biography to not render properly with tinymce 
+* Fixed Bug that causes <br> with nl2br function
 
 ### 1.1.2 ###
 * Fixed Bug that did not update the version

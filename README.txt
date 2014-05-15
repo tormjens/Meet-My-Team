@@ -121,6 +121,10 @@ Feel free to email us at ahoy@buooy.com.
 
 == Changelog ==
 
+= 1.2.3 =
+* Fixed Bug that causes the biography to not render properly with tinymce 
+* Fixed Bug that causes <br> with nl2br function
+
 = 1.1.3 =
 * Fixed Bug that prevented content from appearing before shortcode (thanks to trevor and Wh1sp3r)
 * Added debugging console logs
