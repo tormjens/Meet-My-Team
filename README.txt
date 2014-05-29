@@ -2,8 +2,8 @@
 Contributors: Buooy
 Tags: meet,my,team,members,staff,gallery,responsive,modal,grid
 Requires at least: 3.6
-Tested up to: 3.8.1
-Stable tag: 1.2.1
+Tested up to: 3.9.1
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,15 +16,13 @@ Meet My Team solves that problem by providing an intuitive interface that allows
 
 **Announcement**
 
-Firstly, I'm sorry for the long time of absence. I've been extremely busy and I apologize to all who have been having problem with the plugin.
+Many Bug fixes:
 
-One of the biggest problem is the centering of the modal. This is likely caused by the modal javascript algorithm that is used to center the modal.
+1. Added support for TinyMCE Advanced
 
-If it is giving you any problems, please use the disable_modal_centering attribute as follows: [meet-my-team cols="3" show_groups="" debug='true' disable_modal_centering='true']
+2. Removed bug with nl2br
 
-The other issue is using the shortcode twice on the same page. This was due to me using "include" instead of "include_once". A careless mistake on my part. I have rectified as necessary.
-
-I will address other issues once I get a chance
+3. Fixed bug that is caused by noConflict jQuery
 
 **Features**
 
@@ -120,6 +118,9 @@ Feel free to email us at ahoy@buooy.com.
 4. Responsive Modal that displays each team member's information
 
 == Changelog ==
+
+= 1.2.4 =
+* Fixed Bug with jQuery
 
 = 1.2.3 =
 * Fixed Bug that causes the biography to not render properly with tinymce 
