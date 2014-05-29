@@ -1,7 +1,7 @@
 var disable_modal_centering = false;
 /* Reveal js */
 (function(e){e(".mmt[data-reveal-id]").live("click",function(t){ 
-	if( jQuery(this).data('modal_centering') == 'true' ){
+	if( e(this).data('modal_centering') == 'true' ){
 		disable_modal_centering = true;
 	}
 	/* Check that enable modal */
