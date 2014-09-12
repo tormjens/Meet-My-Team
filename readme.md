@@ -3,7 +3,7 @@
 **Tags:** meet,my,team,members,staff,gallery,responsive,modal,grid  
 **Requires at least:** 3.6  
 **Tested up to:** 3.9.1  
-**Stable tag:** 1.2.4  
+**Stable tag:** 1.2.5  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -119,8 +119,11 @@ Feel free to email us at ahoy@buooy.com.
 
 ## Changelog ##
 
+### 1.2.5 ###
+* Fixed Bug with shortcodes in biography - Thanks to Mark Shibley!
+
 ### 1.2.4 ###
-* Fixed Bug witj jQuery
+* Fixed Bug with jQuery
 
 ### 1.2.3 ###
 * Fixed Bug that causes the biography to not render properly with tinymce 
