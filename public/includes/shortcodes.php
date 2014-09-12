@@ -202,7 +202,7 @@ class Meet_My_Team_Shortcodes {
 			$modal .= '<a href="mailto:'.$details['email'].'" target="_blank">'.$details['email'].'</a>';
 		}
 
-		$modal .=	'<div>'.$details['biography'].'</div>';
+		$modal .=	'<div>'.do_shortcode ( $details['biography'] ).'</div>';
 		
 		if( $details['personal_url'] != '' ){				
 			$modal .= '<a href="'.$details['personal_url'].'" target="_blank">Personal Link</a>';
