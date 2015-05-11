@@ -61,11 +61,11 @@ class Meet_My_Team_Shortcodes {
 
 		), $atts ) );
 
-		$this->parent_container 		= 	$parent_container;
+		$this->parent_container 		= 	apply_filters('mmt_parent_container', $parent_container);
 		$this->parent_container_id		=	$parent_container_id;
-		$this->parent_container_class	=	$parent_container_class;
-		$this->row_container_class		=	$row_container_class;
-		$this->item_container 			=	$item_container;
+		$this->parent_container_class	=	apply_filters('mmt_parent_container_class', $parent_container_class);
+		$this->row_container_class		=	apply_filters('mmt_row_container_class', $row_container_class);
+		$this->item_container 			=	apply_filters('mmt_item_container', $item_container);
 		$this->show_groups				=	$show_groups;
 		$this->debug 					=	$debug;
 		$this->disable_modal_centering	=	$disable_modal_centering;
@@ -143,7 +143,7 @@ class Meet_My_Team_Shortcodes {
 				$member_details['biography']	=	wpautop( get_post_meta( $member->ID, 'mmt_biography', true ) );
 				$member_details['personal_url']	=	get_post_meta( $member->ID, 'mmt_url', true );
 
-
+				$member_details = apply_filters('mmt_member_details', $member_details);
 				$mmt .= $this->build_single_member( $member_details );
 
 				if( $index%( $this->cols ) == ($this->cols-1) ){
@@ -210,6 +210,8 @@ class Meet_My_Team_Shortcodes {
 
 		$modal .= '		<a class="close-reveal-modal">&#215;</a>
 					</div>';
+					
+		$modal = apply_filters('mmt_modal', $modal);
 
 		// Build the initial display
 		$display = '<'.$this->item_container.' data-reveal-id="mmt_member_'.$details['id'].'" class="mmt '.$this->item_container_class.'">';
@@ -219,6 +221,8 @@ class Meet_My_Team_Shortcodes {
 			$display .= '<h4>'.$details['name'].'</h3>';
 			$display .= '<h6>'.$details['designation'].'</h4>';
 		$display .= '</'.$this->item_container.'>';
+		
+		$display = apply_filters('mmt_display', $display);
 
 		return $modal.$display;
 	}
