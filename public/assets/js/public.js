@@ -1,6 +1,6 @@
 var disable_modal_centering = false;
 /* Reveal js */
-(function(e){e(".mmt[data-reveal-id]").live("click",function(t){ 
+(function(e){e(".mmt[data-reveal-id]").on("click",function(t){ 
 	if( e(this).data('modal_centering') == 'true' ){
 		disable_modal_centering = true;
 	}
